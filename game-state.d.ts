@@ -1,0 +1,45 @@
+/// <reference types="node" />
+export default class GameState {
+    private static instance;
+    wordsOnScreen: number;
+    words: HTMLElement[] | undefined;
+    activeWord: HTMLElement | null;
+    nextWordIndex: number | undefined;
+    normalWordsCaptured: number;
+    highlightColor: string;
+    highlightedIndex: number | null;
+    typedletters: number;
+    errors: number;
+    typingStart: Date | undefined;
+    typingEnd: Date | undefined;
+    wpm: number;
+    score: number;
+    activeKey: Element | null;
+    paused: boolean;
+    showKeyboard: boolean;
+    timerInterval: number | NodeJS.Timeout;
+    wordRemover: number | NodeJS.Timeout;
+    wordAdder: number | NodeJS.Timeout;
+    time: string | undefined;
+    container: HTMLDivElement | null;
+    mainTextContainer: HTMLDivElement | null;
+    scoreContainer: HTMLDivElement | null;
+    gameModes: NodeListOf<HTMLDivElement>;
+    wpmContainer: HTMLDivElement | null;
+    wpmOverlay: HTMLDivElement | null;
+    wpmResetGame: HTMLDivElement | null;
+    wpmScoreContainer: HTMLDivElement | null;
+    wpmValue: HTMLDivElement | null;
+    controlButton: HTMLElement | null;
+    pauseButton: HTMLElement | null;
+    playButton: HTMLElement | null;
+    keyboardButton: HTMLElement | null;
+    keyboard: HTMLElement | null;
+    showHideKeyboardMessage: HTMLElement | null;
+    timer: HTMLElement | null;
+    shiftLeftSurface: HTMLElement | null;
+    altLeftSurface: HTMLElement | null;
+    gameMode: string;
+    activeCharacter: string;
+    static getInstance(): GameState;
+}
