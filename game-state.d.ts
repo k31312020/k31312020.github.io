@@ -25,10 +25,11 @@ export default class GameState {
     mainTextContainer: HTMLDivElement | null;
     scoreContainer: HTMLDivElement | null;
     gameModes: NodeListOf<HTMLDivElement>;
-    wpmContainer: HTMLDivElement | null;
     wpmOverlay: HTMLDivElement | null;
-    wpmResetGame: HTMLDivElement | null;
-    wpmScoreContainer: HTMLDivElement | null;
+    scoreOverlay: HTMLDivElement | null;
+    resetGame: HTMLDivElement | null;
+    playerScore: HTMLDivElement | null;
+    playerScoreBar: HTMLDivElement | null;
     wpmValue: HTMLDivElement | null;
     controlButton: HTMLElement | null;
     pauseButton: HTMLElement | null;
